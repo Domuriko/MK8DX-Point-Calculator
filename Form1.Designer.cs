@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.cbMode = new System.Windows.Forms.ComboBox();
-            this.btnNeuerWar = new System.Windows.Forms.Button();
+            this.btnNewWar = new System.Windows.Forms.Button();
             this.tbHeimTag = new System.Windows.Forms.TextBox();
             this.tbGastTag = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,14 +55,16 @@
             this.tbPlatzierungenT2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbStrecke = new System.Windows.Forms.TextBox();
-            this.btnHinzufügen = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.lbSpots1 = new System.Windows.Forms.Label();
             this.tbPlatzierungen = new System.Windows.Forms.TextBox();
             this.lbLetztesRennen = new System.Windows.Forms.ListBox();
             this.lbVorherigeRennen = new System.Windows.Forms.ListBox();
             this.lbTotalScore = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbMode
@@ -83,15 +85,15 @@
             this.cbMode.TabIndex = 7;
             this.cbMode.SelectedIndexChanged += new System.EventHandler(this.cbMode_SelectedIndexChanged);
             // 
-            // btnNeuerWar
+            // btnNewWar
             // 
-            this.btnNeuerWar.Location = new System.Drawing.Point(6, 155);
-            this.btnNeuerWar.Name = "btnNeuerWar";
-            this.btnNeuerWar.Size = new System.Drawing.Size(84, 23);
-            this.btnNeuerWar.TabIndex = 8;
-            this.btnNeuerWar.Text = "new War";
-            this.btnNeuerWar.UseVisualStyleBackColor = true;
-            this.btnNeuerWar.Click += new System.EventHandler(this.btnNeuerWar_Click);
+            this.btnNewWar.Location = new System.Drawing.Point(6, 155);
+            this.btnNewWar.Name = "btnNewWar";
+            this.btnNewWar.Size = new System.Drawing.Size(84, 23);
+            this.btnNewWar.TabIndex = 8;
+            this.btnNewWar.Text = "new War";
+            this.btnNewWar.UseVisualStyleBackColor = true;
+            this.btnNewWar.Click += new System.EventHandler(this.btnNewWar_Click);
             // 
             // tbHeimTag
             // 
@@ -145,7 +147,7 @@
             this.groupBox1.Controls.Add(this.lbTeam3Tag);
             this.groupBox1.Controls.Add(this.tbTeam3Tag);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnNeuerWar);
+            this.groupBox1.Controls.Add(this.btnNewWar);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cbMode);
             this.groupBox1.Controls.Add(this.label2);
@@ -242,7 +244,7 @@
             this.groupBox2.Controls.Add(this.tbPlatzierungenT2);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.tbStrecke);
-            this.groupBox2.Controls.Add(this.btnHinzufügen);
+            this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.lbSpots1);
             this.groupBox2.Controls.Add(this.tbPlatzierungen);
             this.groupBox2.Location = new System.Drawing.Point(12, 207);
@@ -344,15 +346,15 @@
             this.tbStrecke.Size = new System.Drawing.Size(84, 23);
             this.tbStrecke.TabIndex = 14;
             // 
-            // btnHinzufügen
+            // btnAdd
             // 
-            this.btnHinzufügen.Location = new System.Drawing.Point(6, 155);
-            this.btnHinzufügen.Name = "btnHinzufügen";
-            this.btnHinzufügen.Size = new System.Drawing.Size(84, 23);
-            this.btnHinzufügen.TabIndex = 15;
-            this.btnHinzufügen.Text = "Add";
-            this.btnHinzufügen.UseVisualStyleBackColor = true;
-            this.btnHinzufügen.Click += new System.EventHandler(this.btnHinzufügen_Click);
+            this.btnAdd.Location = new System.Drawing.Point(6, 155);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(84, 23);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lbSpots1
             // 
@@ -398,11 +400,23 @@
             this.lbTotalScore.Size = new System.Drawing.Size(319, 184);
             this.lbTotalScore.TabIndex = 12;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(569, 117);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(110, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 396);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbTotalScore);
             this.Controls.Add(this.lbVorherigeRennen);
             this.Controls.Add(this.lbLetztesRennen);
@@ -414,6 +428,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,7 +436,7 @@
         #endregion
 
         private ComboBox cbMode;
-        private Button btnNeuerWar;
+        private Button btnNewWar;
         private TextBox tbHeimTag;
         private TextBox tbGastTag;
         private Label label1;
@@ -433,7 +448,7 @@
         private TextBox tbPlatzierungen;
         private Label label5;
         private TextBox tbStrecke;
-        private Button btnHinzufügen;
+        private Button btnAdd;
         private ListBox lbLetztesRennen;
         private ListBox lbVorherigeRennen;
         private ListBox lbTotalScore;
@@ -453,5 +468,6 @@
         private TextBox tbTeam4Tag;
         private Label lbTeam3Tag;
         private TextBox tbTeam3Tag;
+        private PictureBox pictureBox1;
     }
 }

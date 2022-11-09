@@ -266,7 +266,7 @@
             }
         }
 
-        private void btnNeuerWar_Click(object sender, EventArgs e)
+        private void btnNewWar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -317,7 +317,7 @@
             }
         }
 
-        private void btnHinzufügen_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
@@ -345,6 +345,7 @@
                         lbLetztesRennen.Items.Add("");
                         lbLetztesRennen.Items.Add($"Difference: {score - enemyScore}");
 
+                        pictureBox1.BackgroundImage = race.TrackImage;
                         string text;
                         if (race.Track != "") text = $"{lbVorherigeRennen.Items.Count} | {race.Score} - {race.EnemyScore} ({race.GetDifferenz(0)}) ({race.Track})";
                         else text = $"{lbVorherigeRennen.Items.Count} | {race.Score} - {race.EnemyScore} ({race.GetDifferenz(0)})";
@@ -377,6 +378,7 @@
                         lbLetztesRennen.Items.Add($"Difference {war.Home} - {war.Guest}: {dif[0]}");
                         lbLetztesRennen.Items.Add($"Difference {war.Home} - {war.Team3}: {dif[1]}");
 
+                        pictureBox1.BackgroundImage = race.TrackImage;
                         if (race.Track != "") text = $"{lbVorherigeRennen.Items.Count} | {race.Score} / {race.EnemyScore} / {race.EnemyScore2} ({dif[0]} / {dif[1]}) ({race.Track})";
                         else text = $"{lbVorherigeRennen.Items.Count} | {race.Score} / {race.EnemyScore} / {race.EnemyScore2} ({dif[0]} / {dif[1]})";
                         lbVorherigeRennen.Items.Add(text);
@@ -413,6 +415,7 @@
                         lbLetztesRennen.Items.Add($"Difference {war.Home} - {war.Team3}: {dif[1]}");
                         lbLetztesRennen.Items.Add($"Difference {war.Home} - {war.Team4}: {dif[2]}");
 
+                        pictureBox1.BackgroundImage = race.TrackImage;
                         if (race.Track != "") text = $"{lbVorherigeRennen.Items.Count} | {race.Score} / {race.EnemyScore} / {race.EnemyScore2} / {race.EnemyScore3} ({dif[0]} / {dif[1]} / {dif[2]}) ({race.Track})";
                         else text = $"{lbVorherigeRennen.Items.Count} | {race.Score} / {race.EnemyScore} / {race.EnemyScore2} / {race.EnemyScore3} ({dif[0]} / {dif[1]} / {dif[2]})";
                         lbVorherigeRennen.Items.Add(text);
@@ -456,6 +459,7 @@
                         lbLetztesRennen.Items.Add($"Difference {war.Home} - {war.Team5}: {dif[3]}");
                         lbLetztesRennen.Items.Add($"Difference {war.Home} - {war.Team6}: {dif[4]}");
 
+                        pictureBox1.BackgroundImage = race.TrackImage;
                         if (race.Track != "") text = $"{lbVorherigeRennen.Items.Count} | {race.Score} / {race.EnemyScore} / {race.EnemyScore2} / {race.EnemyScore3} / {race.EnemyScore4} / {race.EnemyScore5} ({dif[0]} / {dif[1]} / {dif[2]} / {dif[3]} / {dif[4]}) ({race.Track})";
                         else text = $"{lbVorherigeRennen.Items.Count} | {race.Score} / {race.EnemyScore} / {race.EnemyScore2} / {race.EnemyScore3} / {race.EnemyScore4} / {race.EnemyScore5} ({dif[0]} / {dif[1]} / {dif[2]} / {dif[3]} / {dif[4]})";
                         lbVorherigeRennen.Items.Add(text);
@@ -481,11 +485,6 @@
             {
                 MessageBox.Show(this, ex.Message, "An error occured while trying to add the race");
             }
-        }
-
-        private void TrackHandling(string trackAlias)
-        {
-
         }
     }
 }
