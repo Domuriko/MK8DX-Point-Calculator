@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Mario_Kart_Punkterechner
+﻿namespace Mario_Kart_Punkterechner
 {
     internal class Race
     {
@@ -23,6 +17,7 @@ namespace Mario_Kart_Punkterechner
         private int enemyScore3;
         private int enemyScore4;
         private int enemyScore5;
+        private Image trackImage;
         public string Track { get => track; }
         public int Score { get => score; }
         public int EnemyScore { get => enemyScore; }
@@ -36,6 +31,7 @@ namespace Mario_Kart_Punkterechner
         public string EnemyPlacements3 { get => enemyPlacements3; }
         public string EnemyPlacements4 { get => enemyPlacements4; }
         public string EnemyPlacements5 { get => enemyPlacements5; }
+        public Image TrackImage { get => trackImage; }
 
         // 6v6, 5v5, 4v4, 3v3, 2v2
         public Race(string p, string f)
@@ -204,6 +200,7 @@ namespace Mario_Kart_Punkterechner
         public void SetTrack(string tr)
         {
             track = tr;
+            TrackHandling();
         }
 
         public void InitScore()
@@ -859,6 +856,99 @@ namespace Mario_Kart_Punkterechner
                     enemyScore5 = maxScore6v6 - score - enemyScore - enemyScore2 - enemyScore3 - enemyScore4;
                     break;
             }
+        }
+
+        public void TrackHandling()
+        {
+            if (string.IsNullOrEmpty(track))
+            {
+                trackImage = Image.FromFile(@".\src\blank.png");
+            }
+            trackImage = track.ToLower() switch
+            {
+                // Mushroom Cup
+                "mks" => Image.FromFile(@".\src\mks.png"),
+                "wp" => Image.FromFile(@".\src\wp.png"),
+                "ssc" => Image.FromFile(@".\src\ssc.png"),
+                "tr" => Image.FromFile(@".\src\tr.png"),
+                // Flower Cup
+                "mc" => Image.FromFile(@".\src\mc.png"),
+                "th" => Image.FromFile(@".\src\th.png"),
+                "tm" => Image.FromFile(@".\src\tm.png"),
+                "sgf" => Image.FromFile(@".\src\sgf.png"),
+                // Star Cup
+                "sa" => Image.FromFile(@".\src\sa.png"),
+                "ds" => Image.FromFile(@".\src\ds.png"),
+                "ed" => Image.FromFile(@".\src\ed.png"),
+                "mw" => Image.FromFile(@".\src\mw.png"),
+                // Special Cup
+                "cc" => Image.FromFile(@".\src\cc.png"),
+                "bdd" => Image.FromFile(@".\src\bdd.png"),
+                "bc" => Image.FromFile(@".\src\bc.png"),
+                "rr" => Image.FromFile(@".\src\rr.png"),
+                // Shell Cup
+                "rmmm" => Image.FromFile(@".\src\rmmm.png"),
+                "rmc" => Image.FromFile(@".\src\rmc.png"),
+                "rccb" => Image.FromFile(@".\src\rccb.png"),
+                "rtt" => Image.FromFile(@".\src\rtt.png"),
+                // Banana Cup
+                "rddd" => Image.FromFile(@".\src\rddd.png"),
+                "rdp3" => Image.FromFile(@".\src\rdp3.png"),
+                "rrry" => Image.FromFile(@".\src\rrry.png"),
+                "rdkj" => Image.FromFile(@".\src\rdkj.png"),
+                // Leaf Cup
+                "rws" => Image.FromFile(@".\src\rws.png"),
+                "rsl" => Image.FromFile(@".\src\rsl.png"),
+                "rmp" => Image.FromFile(@".\src\rmp.png"),
+                "ryv" => Image.FromFile(@".\src\ryv.png"),
+                // Lightning Cup
+                "rttc" => Image.FromFile(@".\src\rttc.png"),
+                "rpps" => Image.FromFile(@".\src\rpps.png"),
+                "rgv" => Image.FromFile(@".\src\rgv.png"),
+                "rrrd" => Image.FromFile(@".\src\rrrd.png"),
+                // Egg Cup
+                "dyc" => Image.FromFile(@".\src\dyc.png"),
+                "dea" => Image.FromFile(@".\src\dea.png"),
+                "ddd" => Image.FromFile(@".\src\ddd.png"),
+                "dmc" => Image.FromFile(@".\src\dmc.png"),
+                // Triforce Cup
+                "dwgm" => Image.FromFile(@".\src\dwgm.png"),
+                "drr" => Image.FromFile(@".\src\drr.png"),
+                "diio" => Image.FromFile(@".\src\diio.png"),
+                "dhc" => Image.FromFile(@".\src\dhc.png"),
+                // Crossing Cup
+                "dbp" => Image.FromFile(@".\src\dbp.png"),
+                "dcl" => Image.FromFile(@".\src\dcl.png"),
+                "dww" => Image.FromFile(@".\src\dww.png"),
+                "dac" => Image.FromFile(@".\src\dac.png"),
+                // Bell Cup
+                "dnbc" => Image.FromFile(@".\src\dnbc.png"),
+                "drir" => Image.FromFile(@".\src\drir.png"),
+                "dsbs" => Image.FromFile(@".\src\dsbs.png"),
+                "dbb" => Image.FromFile(@".\src\dbb.png"),
+                // Golden Dash Cup
+                "bpp" => Image.FromFile(@".\src\bpp.png"),
+                "btc" => Image.FromFile(@".\src\btc.png"),
+                "bcmo" => Image.FromFile(@".\src\bcmo.png"),
+                "bcma" => Image.FromFile(@".\src\bcma.png"),
+                // Lucky Cat Cup
+                "btb" => Image.FromFile(@".\src\btb.png"),
+                "bsr" => Image.FromFile(@".\src\bsr.png"),
+                "bsg" => Image.FromFile(@".\src\bsg.png"),
+                "bnh" => Image.FromFile(@".\src\bnh.png"),
+                // Turnip Cup
+                "bnym" => Image.FromFile(@".\src\bnym.png"),
+                "bmc3" => Image.FromFile(@".\src\bmc3.png"),
+                "bkd" => Image.FromFile(@".\src\bkd.png"),
+                "bwp" => Image.FromFile(@".\src\bwp.png"),
+                // Propeller Cup
+                "bss" => Image.FromFile(@".\src\bss.png"),
+                "bsl" => Image.FromFile(@".\src\bsl.png"),
+                "bmg" => Image.FromFile(@".\src\bmg.png"),
+                "bshs" => Image.FromFile(@".\src\bshs.png"),
+                // MORE COMING SOON
+                _ => Image.FromFile(@".\src\blank.png"),
+            };
         }
     }
 }
