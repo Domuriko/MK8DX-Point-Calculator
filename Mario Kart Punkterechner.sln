@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mario Kart Punkterechner", "Mario Kart Punkterechner.csproj", "{A75C1208-E7A1-47E5-AD9B-5E593F81C90D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Streckenbilder", "Streckenbilder", "{3A689BFE-FFF0-4820-BCD5-91BF8CFD9967}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A75C1208-E7A1-47E5-AD9B-5E593F81C90D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75C1208-E7A1-47E5-AD9B-5E593F81C90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75C1208-E7A1-47E5-AD9B-5E593F81C90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75C1208-E7A1-47E5-AD9B-5E593F81C90D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E529F87F-42E3-4529-B7AF-DCEC433D1D83}
+	EndGlobalSection
+EndGlobal
