@@ -1,3 +1,5 @@
+[![.NET](https://github.com/Domuriko/MK8DX-Point-Calculator/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Domuriko/MK8DX-Point-Calculator/actions/workflows/dotnet.yml)
+
 <h1>Mario Kart Point Calculator</h1>
 
 <h2>Information</h2>
