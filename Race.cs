@@ -946,6 +946,16 @@
                 "bsl" => Image.FromFile(@".\src\bsl.png"),
                 "bmg" => Image.FromFile(@".\src\bmg.png"),
                 "bshs" => Image.FromFile(@".\src\bshs.png"),
+                // Rock Cup
+                "bll" => Image.FromFile(@".\src\bll.png"),
+                "bbl" => Image.FromFile(@".\src\bbl.png"),
+                "brrm" => Image.FromFile(@".\src\brrm.png"),
+                "bmt" => Image.FromFile(@".\src\bmt.png"),
+                // Moon Cup
+                "bbb" => Image.FromFile(@".\src\bbb.png"),
+                "bpg" => Image.FromFile(@".\src\bpg.png"),
+                "bmm" => Image.FromFile(@".\src\bmm.png"),
+                "brr" => Image.FromFile(@".\src\brr.png"),
                 // MORE COMING SOON
                 _ => Image.FromFile(@".\src\blank.png"),
             };
