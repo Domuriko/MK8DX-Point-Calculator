@@ -955,7 +955,17 @@
                 "bbb" => Image.FromFile(@".\src\bbb.png"),
                 "bpg" => Image.FromFile(@".\src\bpg.png"),
                 "bmm" => Image.FromFile(@".\src\bmm.png"),
-                "brr" => Image.FromFile(@".\src\brr.png"),
+                "brr" => Image.FromFile(@".\src\brr7.png"),
+                // Apple Cup
+                "bad" => Image.FromFile(@".\src\bad.png"),
+                "brp" => Image.FromFile(@".\src\brp.png"),
+                "bdks" => Image.FromFile(@".\src\bdks.png"),
+                "byi" => Image.FromFile(@".\src\byi.png"),
+                // Boomerang Cup
+                "bbr" => Image.FromFile(@".\src\bbr.png"),
+                "bmc" => Image.FromFile(@".\src\bmc.png"),
+                "bws" => Image.FromFile(@".\src\bws.png"),
+                "bsis" => Image.FromFile(@".\src\bsis.png"),
                 // MORE COMING SOON
                 _ => Image.FromFile(@".\src\blank.png"),
             };
